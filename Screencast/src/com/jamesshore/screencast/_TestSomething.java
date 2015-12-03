@@ -14,16 +14,5 @@ public class _TestSomething {
 	public void nothing() {
 		
 	}
-	/*
-	 * Test2: is to tract the transaction of a Saving account, 
-	 * such as: it deposit
-	 */
-	@Test
-	public void savingsAccount(){
-		SavingsAccount account = new SavingsAccount();
-		account.deposit(100);
-		assertEquals(100, account.balance());
-	}
-
-}
+}	
 
