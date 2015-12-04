@@ -16,7 +16,14 @@ public class SavingsAccount {
 	public void withdraw(int amount) {
 		balance -=amount;
 	}
+	
+		public SavingsAccount nextYear(double interestRate) {
+			int nextYearBalance = + (int)(interestRate*balance/100);
+			this.deposit(nextYearBalance);
+			return this;
+	}
 
+	
 
 
 }

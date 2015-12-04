@@ -36,6 +36,11 @@ public class _SavingAccount {
 			assertEquals("after withdraw", 50, account.balance());
 			}
 	
+	/*
+	 * Test4:  
+	 * This test for negative balance in-case the account runs negative after transactions
+	 */
+	
 	@Test
 	public void negativeBalanceIsJustFine(){
 		SavingsAccount account = new SavingsAccount();
@@ -43,5 +48,20 @@ public class _SavingAccount {
 		assertEquals(-75, account.balance());
 	}
 	
+	/*
+	 * Test5:  
+	 * This test handles yearly interest rate in relations to existing deposit.
+	 * As usual it was set to fail the test base on wrong mathematical calculations, 
+	 * and because there was no next year return after the interest has been added,
+	 * but was corrected eventually to pass.
+	 */
 	
+	@Test
+	public void nextYear(){
+		SavingsAccount account = new SavingsAccount();
+		account.deposit(10000);
+		SavingsAccount nextYear = account.nextYear(10);
+		assertEquals(11000, nextYear.balance());
+
+	}
 }
