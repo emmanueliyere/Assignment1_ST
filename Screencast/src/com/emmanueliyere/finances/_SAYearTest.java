@@ -8,8 +8,7 @@ public class _SAYearTest {
 
 	@Test
 	public void endingBalance() {
-		
-		SAYear account = new SAYear(1000, 10);
+		SAYear account = new SAYear(10000, 10);
 		assertEquals(11000, account.endingBalance());
 		}
 }
