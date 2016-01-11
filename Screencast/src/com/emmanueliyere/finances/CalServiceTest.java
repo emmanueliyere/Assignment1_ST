@@ -13,7 +13,7 @@ public class CalServiceTest {
 	CalService calService;
 	@Before 
 	public void setup(){
-		ICalculator cal = mock(ICalculator.class);
+		SavingsCalculator cal = mock(SavingsCalculator.class);
 		when(cal.add(3, 3)).thenReturn(6);
 		calService = new CalService();
 		calService.setCal(cal);
